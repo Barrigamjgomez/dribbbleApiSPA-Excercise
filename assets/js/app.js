@@ -1,14 +1,15 @@
 
-  // Initialize Firebase
+
+ // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyCUvs5MCIVbQHT-UzasbYD_ZsG8z-NbY0Y",
-    authDomain: "dribbbleapispa.firebaseapp.com",
-    databaseURL: "https://dribbbleapispa.firebaseio.com",
-    projectId: "dribbbleapispa",
+    apiKey: "AIzaSyBXVqOFZV-tSTr5uJXedTmWlDu8Pd9GQCc",
+    authDomain: "dribbbleapispa-9bf39.firebaseapp.com",
+    databaseURL: "https://dribbbleapispa-9bf39.firebaseio.com",
+    projectId: "dribbbleapispa-9bf39",
     storageBucket: "",
-    messagingSenderId: "935773620525"
+    messagingSenderId: "767515162801"
   };
-  firebase.initializeApp(config);
+  firebase.initializeApp(config);;
   
 
  var provider = new firebase.auth.GoogleAuthProvider();
