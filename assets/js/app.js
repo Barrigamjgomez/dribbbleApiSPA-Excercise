@@ -9,7 +9,7 @@
     messagingSenderId: "935773620525"
   };
   firebase.initializeApp(config);
-  //termina para logiarse
+  
 
  var provider = new firebase.auth.GoogleAuthProvider();
 
@@ -21,7 +21,11 @@
   // The signed-in user info.
   var user = result.user;
   console.log(user.displayName);
-  
+  $('.user_name').append('<h3> Hi ' + user.displayName + '!</h3>');
+    $('.botonera').removeClass('hidden');
+    $('.datos').removeClass('hidden');
+    $('.pieDePagina').removeClass('hidden');
+
   
   // ...
 }).catch(function(error) {
@@ -36,7 +40,7 @@
 });
 }
 
-
+//termina para logiarse
 
 //Get Username
 const dribbble = 'RypeArts';
