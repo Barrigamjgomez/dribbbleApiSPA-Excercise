@@ -1,4 +1,4 @@
-
+$(document).ready(() =>{
 
  // Initialize Firebase
   var config = {
@@ -12,35 +12,35 @@
   firebase.initializeApp(config);;
   
 
- var provider = new firebase.auth.GoogleAuthProvider();
+   var provider = new firebase.auth.GoogleAuthProvider();
 
 
- function signIn(){
- firebase.auth().signInWithPopup(provider).then(function(result) {
-  // This gives you a Google Access Token. You can use it to access the Google API.
-  var token = result.credential.accessToken;
-  // The signed-in user info.
-  var user = result.user;
-  console.log(user.displayName);
-  $('.user_name').append('<h3> Hi ' + user.displayName + '!</h3>');
-    $('.botonera').removeClass('hidden');
-    $('.datos').removeClass('hidden');
-    $('.pieDePagina').removeClass('hidden');
-
-  
-  // ...
-}).catch(function(error) {
-  // Handle Errors here.
-  var errorCode = error.code;
-  var errorMessage = error.message;
-  // The email of the user's account used.
-  var email = error.email;
-  // The firebase.auth.AuthCredential type that was used.
-  var credential = error.credential;
-  // ...
-});
-}
-
+   function signIn(){
+   firebase.auth().signInWithPopup(provider).then(function(result) {
+    // This gives you a Google Access Token. You can use it to access the Google API.
+    var token = result.credential.accessToken;
+    // The signed-in user info.
+    var user = result.user;
+    console.log(user.displayName);
+    $('.user_name').append('<h3> Hi ' + user.displayName + '!</h3>');
+      $('.botonera').removeClass('hidden');
+      $('.datos').removeClass('hidden');
+      $('.pieDePagina').removeClass('hidden');
+    }
+    
+    // ...
+    }).catch(function(error) {
+    // Handle Errors here.
+    var errorCode = error.code;
+    var errorMessage = error.message;
+    // The email of the user's account used.
+    var email = error.email;
+    // The firebase.auth.AuthCredential type that was used.
+    var credential = error.credential;
+    // ...
+    });
+      }
+})
 //termina para logiarse
 
 //Get Username
