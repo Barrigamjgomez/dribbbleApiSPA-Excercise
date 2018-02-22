@@ -26,7 +26,7 @@ $(document).ready(() =>{
       $('.botonera').removeClass('hidden');
       $('.datos').removeClass('hidden');
       $('.pieDePagina').removeClass('hidden');
-    }
+
     
     // ...
     }).catch(function(error) {
@@ -39,8 +39,8 @@ $(document).ready(() =>{
     var credential = error.credential;
     // ...
     });
-      }
-})
+    }
+
 //termina para logiarse
 
 //Get Username
